@@ -1,6 +1,6 @@
 # AnnotationTool
 This is an annotation tool for image segmentation tasks, where the output after the annotation procedure is a binary mask.
-
+## Dependencies
 ### Requirements
 - Python 3.8
 - numpy 1.24.1
