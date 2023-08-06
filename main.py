@@ -26,7 +26,7 @@ def draw_polygon(event, x, y, flags, param):
 
     elif event == cv2.EVENT_MOUSEMOVE:
         if drawing:
-            cv2.line(image, polygon_points[-1], (x, y), (255, 255, 255), 2)
+            cv2.line(image, polygon_points[-1], (x, y), (255, 0, 0), 2)
             polygon_points.append((x, y))
 
 def AnnotationTool(input_filename) -> None:
@@ -54,7 +54,7 @@ def AnnotationTool(input_filename) -> None:
         elif key == ord('s'):
             rename_filename = os.path.splitext(input_filename)[0] + '_binary_mask.png'
             cv2.imwrite(rename_filename, mask)
-            os.replace(rename_filename, "training_gt/" + rename_filename.split("/")[-1])
+            os.replace(rename_filename, "image_gt/" + rename_filename.split("/")[-1])
             break
 
         elif key == 27:  # ESC key to exit
