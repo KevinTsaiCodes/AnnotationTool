@@ -30,8 +30,6 @@ def draw_polygon(event, x, y, flags, param):
             polygon_points.append((x, y))
 
 def AnnotationTool(input_filename) -> None:
-    if not(input_filename.lower().endswith('.png')):
-        raise Exception("Please provide a filename with a .png extension for the input file.")
 
     global image, mask
 
